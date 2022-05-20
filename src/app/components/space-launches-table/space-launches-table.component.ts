@@ -13,11 +13,44 @@ import { ISpaceLaunches } from 'src/app/models/space-launches';
   templateUrl: './space-launches-table.component.html',
   styleUrls: ['./space-launches-table.component.css']
 })
-export class SpaceLaunchesTableComponent implements OnInit {
+export class SpaceLaunchesTableComponent implements OnInit, OnDestroy {
+  private subs = new Subscription();
 
-  constructor() { }
+  displayedColumns: string[] = ['action', 'name', 'window_start', 'window_end',];
 
-  ngOnInit(): void {
+  public dataSource!: MatTableDataSource<ISpaceLaunches>;
+
+  @ViewChild(MatPaginator, { static: true })
+  paginator!: MatPaginator;
+  @ViewChild(MatSort, { static: true })
+  sort!: MatSort;
+
+  private dataArray: any;
+
+  constructor(private spaceService: SpaceApiService, private _snackBar: MatSnackBar) { }
+  ngOnDestroy(): void {
+    if (this.subs) {
+      this.subs.unsubscribe();
+    }
   }
 
+  ngOnInit(): void {
+    this.subs.add(this.spaceService.getRandomUsers()
+      .subscribe((res) => {
+        console.log(res);
+        this.dataArray = res;
+        this.dataSource = new MatTableDataSource<ISpaceLaunches>(this.dataArray.results);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      },
+        (err: HttpErrorResponse) => {
+          console.log(err);
+        }));
+  }
+  public openRecord(id: number, name: string): void {
+    this._snackBar.open(`Record ${id}`, 'Close', {
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+    }); 
+  }
 }

@@ -7,12 +7,12 @@ import { ISpaceLaunches } from '../models/space-launches';
   providedIn: 'root'
 })
 export class SpaceApiService {
-  private baseURL = 'https://lldev.thespacedevs.com/';
+  private baseURL = 'https://lldev.thespacedevs.com';
   
   constructor(private http: HttpClient) { }
 
   getRandomUsers(): Observable<ISpaceLaunches> {
-   const URL = `${this.baseURL}/2.0.0/launch/upcoming/?format=json&offset=0&ordering=id`;
+   const URL = `${this.baseURL}/2.0.0/launch/upcoming/?format=json&offset=0&ordering=window_start`;
    return this.http.get<ISpaceLaunches>(URL);
   }
 }
