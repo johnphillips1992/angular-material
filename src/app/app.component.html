@@ -1,4 +1,6 @@
-<app-top-bar></app-top-bar>
+<mat-toolbar>
+  <span>Upcoming Space Launches</span>
+</mat-toolbar>
 
 <div class="container">
   <router-outlet></router-outlet>
@@ -9,3 +11,4 @@ Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at https://angular.io/license
 -->
+<table mat-table [dataSource]="dataSource"></table>

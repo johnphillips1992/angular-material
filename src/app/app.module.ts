@@ -6,19 +6,31 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import { SpaceLaunchesTableComponent } from './components/space-launches-table/space-launches-table.component';
 
 @NgModule({
   imports: [
+    MatSliderModule,
+    MatIconModule,
+    MatTableModule,
+    MatToolbarModule,
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    SpaceLaunchesTableComponent
   ],
   bootstrap: [
     AppComponent
