@@ -21,6 +21,7 @@ export class SpaceLaunchesTableComponent implements OnInit, OnDestroy {
   public dataSource!: MatTableDataSource<ISpaceLaunches>;
   public dataArray!: any;
   public dataResults: any;
+  public descriptionLength: any;
 
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
@@ -45,6 +46,7 @@ export class SpaceLaunchesTableComponent implements OnInit, OnDestroy {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         this.dataResults = this.dataArray.results;
+        this.descriptionLength = 124;
       },
         (err: HttpErrorResponse) => {
           console.log(err);

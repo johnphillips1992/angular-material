@@ -1,282 +1,79 @@
-<mat-grid-list cols="4" rowHeight="100px">  
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[0]?.name }}</h1>    
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[0]?.pad?.wiki_url }}"><img src="{{ dataResults[0]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[0]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[0]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[0]?.mission?.description }}
-  </mat-grid-tile>  
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[1]?.pad?.wiki_url }}"><img src="{{ dataResults[1]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[1]?.name }}</h1>    
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[1]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[1]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[1]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[2]?.name }}</h1>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[2]?.pad?.wiki_url }}"><img src="{{ dataResults[2]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[2]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[2]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[2]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[3]?.pad?.wiki_url }}"><img src="{{ dataResults[3]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[3]?.name }}</h1>
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[3]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[3]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[3]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[4]?.name }}</h1>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[4]?.pad?.wiki_url }}"><img src="{{ dataResults[4]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[4]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[4]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[4]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[5]?.pad?.wiki_url }}"><img src="{{ dataResults[5]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[5]?.name }}</h1>
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[5]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[5]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[5]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[6]?.name }}</h1>
-    
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-    <a target="_black" href="{{ dataResults[6]?.pad?.wiki_url }}"><img src="{{ dataResults[6]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[6]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[6]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[6]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[7]?.pad?.wiki_url }}"><img src="{{ dataResults[7]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[7]?.name }}</h1>    
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[7]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[7]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[7]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[8]?.name }}</h1>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[8]?.pad.wiki_url }}"><img src="{{ dataResults[8]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[8]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[8]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[8]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="4" rowHeight="100px">
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="2">
-      <a target="_black" href="{{ dataResults[9]?.pad.wiki_url }}"><img src="{{ dataResults[9]?.image }}" class="header-image"></a>
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="3"
-      [rowspan]="1">
-    <h1>{{ dataResults[9]?.name }}</h1>
-  </mat-grid-tile>  
-  <mat-grid-tile
-      [colspan]="1"
-      [rowspan]="1">
-    {{ dataResults[9]?.launch_service_provider?.name }}
-    <br/>
-    {{ dataResults[9]?.window_start }}
-  </mat-grid-tile>
-  <mat-grid-tile
-      [colspan]="2"
-      [rowspan]="1">
-    {{ dataResults[9]?.mission?.description }}
-  </mat-grid-tile>
-</mat-grid-list>
-
-
-<!---div class="mat-elevation-z1">
+<div class="main-display">
+  <mat-grid-list cols="4" rowHeight="100px" *ngFor="let element of dataResults; let index = index">  
+    <mat-grid-tile *ngIf="index % 2 == 0"
+        [colspan]="1"
+        [rowspan]="2"
+        [ngClass]="'spacer'">   
+    </mat-grid-tile> 
+    <mat-grid-tile *ngIf="index % 2 != 0"
+        [colspan]="1"
+        [rowspan]="2">
+        <a target="_black" href="{{ element?.pad?.wiki_url }}"><img src="{{ element?.image }}" class="header-image"></a>
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="2"
+        [rowspan]="1">
+      <h1><a href="{{ element?.pad?.info_url }}">{{ element?.name }}</a></h1>    
+    </mat-grid-tile>  
+    <mat-grid-tile *ngIf="index % 2 == 0"
+        [colspan]="1"
+        [rowspan]="2">
+        <a target="_black" href="{{ element?.pad?.wiki_url }}"><img src="{{ element?.image }}" class="header-image"></a>
+    </mat-grid-tile>
+    <mat-grid-tile *ngIf="index % 2 != 0"
+        [colspan]="1"
+        [rowspan]="2" 
+        [ngClass]="'spacer'">  
+    </mat-grid-tile>
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+      {{ element?.launch_service_provider?.name.substring(0, 20) }}
+      <br/>
+      {{ element?.window_start }}
+    </mat-grid-tile>   
+    <mat-grid-tile
+        [colspan]="1"
+        [rowspan]="1">
+      {{ element?.mission?.description.substring(0, descriptionLength) }}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div class="mat-elevation-z1">
     <table mat-table [dataSource]="dataSource" matSort>
   
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef  mat-sort-header> Action</th>
         <td mat-cell *matCellDef="let element" class="left-text">  
-            <button mat-stroked-button color="primary" (click)="openRecord(element.id, element.name)">View</button>
+            <button mat-stroked-button color="primary" (click)="openRecord(element.launch_service_provider?.name, element.mission?.description)">View</button>
         </td>
       </ng-container>
   
       <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Name </th>
-        <td mat-cell *matCellDef="let element" class="left-text"> {{element.name}} </td>
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Launch Name </th>
+        <td mat-cell *matCellDef="let element" class="left-text"> 
+          <a target="_black" href="{{ element.pad?.wiki_url }}">
+          {{element.name}} 
+          </a>
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="rocket">
-        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Rocket </th>
-        <td mat-cell *matCellDef="let element" class="left-text"> {{element.rocket.configuration.name}} </td>
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Provider </th>
+        <td mat-cell *matCellDef="let element" class="left-text"> {{element.launch_service_provider.name}} </td>
       </ng-container>
 
       <ng-container matColumnDef="window_start">
-        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Window Start </th>
-        <td mat-cell *matCellDef="let element" class="left-text"> {{element.window_start}} </td>
+        <th mat-header-cell *matHeaderCellDef  mat-sort-header> Date </th>
+        <td mat-cell *matCellDef="let element" class="left-text"> 
+          <a target="_blank" href="{{element.image}}">
+            {{element.window_start}}
+          </a> 
+        </td>
       </ng-container>
   
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
   
-</div--->
+</div>
