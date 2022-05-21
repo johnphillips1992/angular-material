@@ -16,10 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { CommonModule } from '@angular/common';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   imports: [
     MatGridListModule,
+    MatDividerModule,
     MatSnackBarModule,
     HttpClientModule,
     MatSliderModule,
