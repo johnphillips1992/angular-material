@@ -14,9 +14,12 @@ import { SpaceLaunchesTableComponent } from './components/space-launches-table/s
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
+    MatGridListModule,
     MatSnackBarModule,
     HttpClientModule,
     MatSliderModule,
@@ -29,7 +32,9 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     RouterModule.forRoot([
       { path: '', component: AppComponent },
     ]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    CommonModule
   ],
   declarations: [
     AppComponent,

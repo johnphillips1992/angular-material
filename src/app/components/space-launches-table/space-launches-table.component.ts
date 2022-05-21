@@ -16,16 +16,18 @@ import { ISpaceLaunches } from 'src/app/models/space-launches';
 export class SpaceLaunchesTableComponent implements OnInit, OnDestroy {
   private subs = new Subscription();
 
-  displayedColumns: string[] = ['action', 'name', 'window_start', 'window_end',];
+  displayedColumns: string[] = ['action', 'name', 'rocket', 'window_start',];
 
   public dataSource!: MatTableDataSource<ISpaceLaunches>;
+  public dataArray!: any;
+  public dataResults: any;
 
   @ViewChild(MatPaginator, { static: true })
   paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true })
   sort!: MatSort;
 
-  private dataArray: any;
+
 
   constructor(private spaceService: SpaceApiService, private _snackBar: MatSnackBar) { }
   ngOnDestroy(): void {
@@ -42,13 +44,14 @@ export class SpaceLaunchesTableComponent implements OnInit, OnDestroy {
         this.dataSource = new MatTableDataSource<ISpaceLaunches>(this.dataArray.results);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.dataResults = this.dataArray.results;
       },
         (err: HttpErrorResponse) => {
           console.log(err);
         }));
   }
   public openRecord(id: number, name: string): void {
-    this._snackBar.open(`Record ${id}`, 'Close', {
+    this._snackBar.open(`Record ${id} ${name}`, 'Close', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
     }); 

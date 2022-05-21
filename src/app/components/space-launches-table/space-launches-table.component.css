@@ -2,8 +2,17 @@ table {
     width: 100%;
   }
   mat-header-cell, mat-cell {
-    justify-content: left;
+    justify-content: center;
   }
   .left-text {
-    text-align: left;
+    text-align: center;
   }
+  .header-image {
+    width: 100%;
+  }
+  .mat-grid-list {
+    border-bottom: solid 2px #000;
+}
+.mat-grid-list:hover {
+  background-color: azure;
+}
